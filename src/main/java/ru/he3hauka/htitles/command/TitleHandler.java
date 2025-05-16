@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import static ru.he3hauka.htitles.utils.HexSupport.formatter;
+import static ru.he3hauka.htitles.utils.HexSupport.format;
 
 public class TitleHandler implements CommandExecutor {
     private final TitleManager titleManager;
@@ -74,7 +74,7 @@ public class TitleHandler implements CommandExecutor {
             return true;
         }
 
-        String formattedTitle = formatter(rawTitle);
+        String formattedTitle = format(rawTitle);
 
         pendingTitles.put(player.getUniqueId(), formattedTitle);
         actionExecutor.execute(player, config.actions_confirm, formattedTitle, player.getLocation());

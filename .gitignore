@@ -1,0 +1,14 @@
+.idea/
+*.iml
+*.iws
+
+target/
+
+build/
+
+*.log
+*.tmp
+*.bak
+
+.DS_Store
+Thumbs.db
