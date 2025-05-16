@@ -1,0 +1,67 @@
+settings:
+  max-size: 12 # /settitle (Title max size) / recommended 12
+  delay: 10000 # Delay for settitle (1000 = 1 sec)
+
+  # Actions example:
+  # 1. [Message] Plugin developer: @he3haukaX {HoverText:cmd /example, text: &#FB9C08HOVERTEXT EXAMPLE}
+  # 2. [Broadcast] Plugin developer: @he3haukaX {HoverText:cmd /example, text: &#FB9C08HOVERTEXT EXAMPLE}
+  # 3. [Sound] ENTITY_VILLAGER_NO:1.0:1.0
+  # 4. [Console] say %player% qq bro, plugin developer: @he3haukaX
+  # 5. [Bossbar] Plugin developer @he3haukaX:100:red:notched_10:1.0"
+  # 6. [Title] Plugin developer && @he3haukaX
+  # 7. [Actionbar] Plugin developer: @he3haukaX
+  # 8. [Effect] END_GATEWAY_SPAWN
+  # 9. [Player] Plugin developer: @he3haukaX
+
+actions:
+  help:
+    - "[Message] &r"
+    - "[Message] &#FB9C08Ԑ &fУстановить титул&7: &#FB9C08/title &7(Титул) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &#FB9C08Ԑ &fТитулы&f поддерживают&7: &#FB9C08Birdflop &7(Ищи в браузере) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &#FB9C08ԏ &fИ также работает с&7: &#FB9C08piliapp cool text &7(Ищи в браузере) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &r"
+    - "[Message] &#FB9C08Ԑ &fСколько раз можно &#FB9C08установить&f титул&7: &#FB9C081&f {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &#FB9C08ԏ &fМожете ли вы &#FB9C08установить&f титул&7: &#FB9C08да&f {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &r"
+  permission:
+    - "[Message] &r"
+    - "[Message] &#FB9C08Ԑ &fУстановить титул&7: &#FB9C08/title &7(Титул) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &#FB9C08Ԑ &fТитулы&f поддерживают&7: &#FB9C08Birdflop &7(Ищи в браузере) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &#FB9C08ԏ &fИ также работает с&7: &#FB9C08piliapp cool text &7(Ищи в браузере) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &r"
+    - "[Message] &#FB9C08Ԑ &fСколько раз можно &#FB9C08установить&f титул&7: &#FB9C081&f {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &#FB9C08ԏ &fМожете ли вы &#FB9C08установить&f титул&7: &#FB9C08нет&f {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &r"
+    - "[Message] &#FB9C08ԑ &fКупить кастом титул&7: &#FB9C08нажми {HoverText:cmd /site, text: §x§F§B§9§C§0§8Купить титул}"
+    - "[Message] &r"
+  finish:
+    - "[Broadcast] &r"
+    - "[Broadcast] &#FB9C08Ԑ &fИгроку &#FB9C08%player% &fбыл установлен {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает RGB}"
+    - "[Broadcast] &#FB9C08ԏ &fТитул&7: &#FB9C08%vault_suffix%&f &7(Подробнее) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает RGB}"
+    - "[Broadcast] &r"
+    - "[Message] &#FB9C08&lТИТУЛ&7: &fВам был установлен титул&7: &#FB9C08%vault_suffix%"
+    - "[Sound] ENTITY_VILLAGER_YES:0.2:1.0"
+    - "[Console] perms user %player% permission set htitle.use false"
+  max-size:
+    - "[Message] &r"
+    - "[Message] &#FB9C08ԑ &fНе-а, необходимо уложиться в &#FB9C0812&f буковок &#FB9C08:) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &r"
+    - "[Sound] ENTITY_VILLAGER_NO:0.2:1.0"
+  confirm:
+    - "[Bossbar] &fПодтвердите установку титула &#FB9C08%title%&f!:200:red:notched_20:1.0"
+    - "[Message] &r {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Подтвердить установку}"
+    - "[Message] &#FB9C08Ԑ &fНажми сюда, чтобы &#FB9C08установить&f титул {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Подтвердить установку}"
+    - "[Message] &#FB9C08ԏ &fПросмотр&7: &#FB9C08%title%&r&#FB9C08 %player_name% {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Подтвердить установку}"
+    - "[Message] &r {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Подтвердить установку}"
+    - "[Sound] ENTITY_EXPERIENCE_ORB_PICKUP:0.2:1.0"
+  confirm-expired:
+    - "[Title] &fВремя &#FB9C08установки && &#FB9C08Титула &fвышло!"
+    - "[Message] &r"
+    - "[Message] &#FB9C08ԑ &fВремя &#FB9C08подтверждения &fтитула вышло! {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &r"
+    - "[Sound] ENTITY_EXPERIENCE_ORB_PICKUP:0.2:1.0"
+  confirm-null:
+    - "[Message] &r"
+    - "[Message] &#FB9C08ԑ &fУ вас нет &#FB9C08титула&f для &#FB9C08подтверждения&f! {HoverText:cmd /title, text: §x§F§B§9§C§0§8Поддерживает &#RRGGBB}"
+    - "[Message] &r"
+    - "[Sound] ENTITY_VILLAGER_NO:0.2:1.0"

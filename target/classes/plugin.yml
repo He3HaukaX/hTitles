@@ -1,0 +1,10 @@
+name: hTitles
+version: "1.0"
+main: ru.he3hauka.htitles.Main
+api-version: '1.16'
+depend: [LuckPerms]
+softdepend: [LuckPerms,PlaceholderAPI]
+author: He3Hauka
+website: https://t.me/hplugin
+commands:
+  htitles:

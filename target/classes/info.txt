@@ -1,0 +1,31 @@
+###############################################
+                                              #
+ hTitles - inc @he3haukaX                     #
+                                              #
+----------------------------------------------#
+                                              #
+Plugin author (автор):                        #
+  - https://t.me/he3haukax                    #
+                                              #
+Support and ask (помощь и поддержка):         #
+  - https://t.me/hplugin                      #
+                                              #
+----------------------------------------------#
+                                              #
+Thanks for using (Спасибо за использование)!  #
+                                              #
+###############################################
+
+[ What is this? English version ]
+
+This is a small mention,
+but when the plugin was distributed to other servers and assemblies,
+people knew whose work it was and could subscribe to THC as a sign of gratitude or be active,
+or ask their question. In general, do not pay attention to this one .txt and don't try to delete it, it will come back!
+
+[ Что это такое? Русская версия ]
+
+Это небольшое упоминание,
+да-бы когда плагин распространялся по другим серверам и по сборкам люди знали,
+чьи это труды и могли в знак благодарности подписаться на ТГК или проявить активность,
+ну или же задать свой вопрос. В общем - не обращайте внимания на этот .txt и не пытайтесь его удалить, он вернётся!
