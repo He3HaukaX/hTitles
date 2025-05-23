@@ -22,7 +22,8 @@ public class Main extends JavaPlugin {
         config.init();
 
         LuckPerms luckPerms = loadLuckPerms();
-        TitleManager titleManager = new TitleManager(luckPerms);
+        TitleManager titleManager = new TitleManager(luckPerms,
+                config);
         getCommand("htitles").setExecutor(new TitleHandler(titleManager, new ActionExecutor(), config));
 
         authorInfo();

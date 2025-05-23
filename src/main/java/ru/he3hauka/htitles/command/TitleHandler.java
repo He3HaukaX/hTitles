@@ -35,10 +35,9 @@ public class TitleHandler implements CommandExecutor {
             sender.sendMessage("§cOnly players can use this command!");
             return true;
         }
-
         Player player = (Player) sender;
 
-        if (!player.hasPermission("htitle.use") && !player.isOp()) {
+        if (!player.hasPermission("htitle.use")) {
             actionExecutor.execute(player, config.actions_permission, "N/A", player.getLocation());
             return true;
         }

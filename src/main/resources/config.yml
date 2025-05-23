@@ -1,6 +1,7 @@
 settings:
   max-size: 12 # /settitle (Title max size) / recommended 12
   delay: 10000 # Delay for settitle (1000 = 1 sec)
+  priority: 100 # Suffix priority
 
   # Actions example:
   # 1. [Message] Plugin developer: @he3haukaX {HoverText:cmd /example, text: &#FB9C08HOVERTEXT EXAMPLE}
@@ -12,6 +13,7 @@ settings:
   # 7. [Actionbar] Plugin developer: @he3haukaX
   # 8. [Effect] END_GATEWAY_SPAWN
   # 9. [Player] Plugin developer: @he3haukaX
+  # 10. [ActionClear] %player% # Delete visuals effects: [Bossbar,Actionbar,Title]
 
 actions:
   help:

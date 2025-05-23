@@ -16,6 +16,7 @@ public class Config {
     public List<String> actions_confirm;
     public List<String> actions_confirm_null;
     public List<String> actions_confirm_expired;
+    public int settings_priority;
     public int settings_max_size;
     public int settings_delay;
     private final JavaPlugin plugin;
@@ -35,6 +36,7 @@ public class Config {
         this.actions_confirm_null = config.getStringList("actions.confirm-null");
         this.actions_max_size = config.getStringList("actions.max-size");
 
+        this.settings_priority = config.getInt("settings.priority", 100);
         this.settings_max_size = config.getInt("settings.max-size", 16);
         this.settings_delay = config.getInt("settings.delay", 10000);
     }

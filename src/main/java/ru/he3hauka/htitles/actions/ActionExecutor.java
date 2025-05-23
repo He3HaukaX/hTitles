@@ -51,6 +51,7 @@ public class ActionExecutor {
                 case "[Bossbar]" -> sendBossBar(player, content, title);
                 case "[Effect]" -> playEffect(location, content);
                 case "[Player]" -> player.performCommand(content);
+                case "[ActionClear]" -> clearVisualActions(player);
                 default -> Bukkit.getLogger().severe("Unknown actionType: " + type);
             }
         }
@@ -161,6 +162,18 @@ public class ActionExecutor {
         Component component = SERIALIZER.deserialize(message);
         player.sendActionBar(component);
     }
+
+    private void clearVisualActions(Player player) {
+        player.clearTitle();
+
+        BossBar bar = activeBossBars.remove(player.getUniqueId());
+        if (bar != null) {
+            player.hideBossBar(bar);
+        }
+
+        player.sendActionBar(Component.empty());
+    }
+
 
     private void sendBossBar(Player player,
                              String raw,

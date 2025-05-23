@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="hTitles:jar">
-    <output-path>$USER_HOME$/Desktop/СБОРКА С 0/plugins</output-path>
+    <output-path>$USER_HOME$/Desktop/Плагины</output-path>
     <root id="archive" name="hTitles.jar">
       <element id="module-output" name="hTitles" />
     </root>
