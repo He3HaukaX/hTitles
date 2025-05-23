@@ -7,6 +7,7 @@ import ru.he3hauka.htitles.actions.ActionExecutor;
 import ru.he3hauka.htitles.command.TitleHandler;
 import ru.he3hauka.htitles.config.Config;
 import ru.he3hauka.htitles.manager.TitleManager;
+import ru.he3hauka.htitles.utils.UpdateChecker;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +26,10 @@ public class Main extends JavaPlugin {
         TitleManager titleManager = new TitleManager(luckPerms,
                 config);
         getCommand("htitles").setExecutor(new TitleHandler(titleManager, new ActionExecutor(), config));
+
+        if (getConfig().getBoolean("settings.update", true)) {
+            new UpdateChecker(this, getConfig().getString("settings.locale")).checkForUpdates();
+        }
 
         authorInfo();
     }
