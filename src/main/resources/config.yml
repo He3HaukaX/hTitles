@@ -1,71 +1,167 @@
 settings:
+  update: true
   locale: en # Localization of shortened strings
 
   max-size: 12 # /settitle (Title max size) / recommended 12
   delay: 10000 # Delay for settitle (1000 = 1 sec)
   priority: 100 # Suffix priority
 
-  # Actions example:
-  # 1. [Message] Plugin developer: @he3haukaX {HoverText:cmd /example, text: &#FB9C08HOVERTEXT EXAMPLE}
-  # 2. [Broadcast] Plugin developer: @he3haukaX {HoverText:cmd /example, text: &#FB9C08HOVERTEXT EXAMPLE}
-  # 3. [Sound] ENTITY_VILLAGER_NO:1.0:1.0
-  # 4. [Console] say %player% qq bro, plugin developer: @he3haukaX
-  # 5. [Bossbar] Plugin developer @he3haukaX:100:red:notched_10:1.0"
-  # 6. [Title] Plugin developer && @he3haukaX
-  # 7. [Actionbar] Plugin developer: @he3haukaX
-  # 8. [Effect] END_GATEWAY_SPAWN
-  # 9. [Player] Plugin developer: @he3haukaX
-  # 10. [ActionClear] %player% # Delete visuals effects: [Bossbar,Actionbar,Title]
+  blocked-words: # Запрещённые символы/слова, IP, домены и номера телефонов
+
+    # Symbols and words
+    - "'"
+    - "@"
+    - ":"
+    - ";"
+    - "$"
+    - "%"
+    - "^"
+    - "*"
+
+    # Start/End domain names
+    - "mc."
+    - ".ru"
+    - ".fun"
+    - "be."
+    - "play."
+    - ".com"
+    - "pe."
+    - "me."
+    - ".top"
+    - "go."
+    - "us."
+    - ".net"
+    - "we."
+    - "ru."
+    - "hub."
+    - "xx."
+    - "s2."
+    - "s5."
+    - "s4."
+    - ".su"
+    - "new."
+    - "s8."
+    - "s7."
+    - "s11."
+    - ".su"
+    - "s10."
+    - "s15."
+    - ".pw"
+    - ".in"
+    - ".me"
+    - "aternos"
+    - "se."
+    - "s3."
+
+    # Start IPs
+    - "192."
+    - "172."
+    - "10."
+    - "127."
+    - "8."
+    - "9."
+    - "100."
+    - "169."
+    - "224."
+    - "240."
+    - "255."
+    - "192.168."
+    - "172.16."
+    - "10.0."
+
+    # Start phone number
+    - "+7"
+    - "+7"
+    - "8("
+    - "8"
+    - "7("
+    - "7"
+    - "+1"
+    - "1-"
+    - "+44"
+    - "44"
+    - "+38"
+    - "38"
+    - "+375"
+    - "375"
+    - "+49"
+    - "49"
+    - "+33"
+    - "33"
+    - "+91"
+    - "91"
+    - "+81"
+    - "81"
+    - "+61"
+    - "61"
+    - "+34"
+    - "34"
+    - "+39"
+    - "39"
+    - "+55"
+    - "55"
 
 actions:
   help:
     - "[Message] &r"
-    - "[Message] &#FB9C08Ԑ &fSet title&7: &#FB9C08/title &7(Your Title) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
-    - "[Message] &#FB9C08Ԑ &fTitles&f support&7: &#FB9C08Birdflop &7(Search in browser) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
-    - "[Message] &#FB9C08ԏ &fAlso works with&7: &#FB9C08piliapp cool text &7(Search in browser) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &#FB9C08Ԑ &fSet title / Установить титул&7: &#FB9C08/title &7(Your Title / Ваш титул) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &#FB9C08Ԑ &fTitles support / Поддержка стилей&7: &#FB9C08Birdflop &7(Search in browser / Ищите в браузере) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &#FB9C08ԏ &fAlso works with / Также работает с&7: &#FB9C08piliapp cool text &7(Search in browser / Ищите в браузере) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
     - "[Message] &r"
-    - "[Message] &#FB9C08Ԑ &fHow many times you can &#FB9C08set&f a title&7: &#FB9C081&f {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
-    - "[Message] &#FB9C08ԏ &fCan you &#FB9C08set&f the title&7: &#FB9C08yes&f {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &#FB9C08Ԑ &fTitle change limit / Сколько раз можно изменить титул&7: &#FB9C081&f"
+    - "[Message] &#FB9C08ԏ &fCan set title now / Сейчас можно изменить титул&7: &#FB9C08yes / да&f"
     - "[Message] &r"
+
   permission:
     - "[Message] &r"
-    - "[Message] &#FB9C08Ԑ &fSet title&7: &#FB9C08/title &7(Your Title) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
-    - "[Message] &#FB9C08Ԑ &fTitles&f support&7: &#FB9C08Birdflop &7(Search in browser) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
-    - "[Message] &#FB9C08ԏ &fAlso works with&7: &#FB9C08piliapp cool text &7(Search in browser) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &#FB9C08Ԑ &fSet title / Установить титул&7: &#FB9C08/title &7(Your Title / Ваш титул)"
+    - "[Message] &#FB9C08Ԑ &fTitles support / Поддержка стилей&7: &#FB9C08Birdflop &7(Search in browser / Ищите в браузере)"
+    - "[Message] &#FB9C08ԏ &fAlso works with / Также работает с&7: &#FB9C08piliapp cool text &7(Search in browser / Ищите в браузере)"
     - "[Message] &r"
-    - "[Message] &#FB9C08Ԑ &fHow many times you can &#FB9C08set&f a title&7: &#FB9C081&f {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
-    - "[Message] &#FB9C08ԏ &fCan you &#FB9C08set&f the title&7: &#FB9C08no&f {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &#FB9C08Ԑ &fTitle change limit / Сколько раз можно изменить титул&7: &#FB9C081&f"
+    - "[Message] &#FB9C08ԏ &fCan set title now / Сейчас можно изменить титул&7: &#FB9C08no / нет&f"
     - "[Message] &r"
-    - "[Message] &#FB9C08ԑ &fBuy a custom title&7: &#FB9C08click here {HoverText:cmd /site, text: §x§F§B§9§C§0§8Buy a title}"
+    - "[Message] &#FB9C08ԑ &fBuy a custom title / Купить кастомный титул&7: &#FB9C08click here / нажмите сюда {HoverText:cmd /site, text: §x§F§B§9§C§0§8Buy a title / Купить титул}"
     - "[Message] &r"
+
   finish:
     - "[Broadcast] &r"
-    - "[Broadcast] &#FB9C08Ԑ &fTitle set for player &#FB9C08%player% {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports RGB}"
-    - "[Broadcast] &#FB9C08ԏ &fTitle&7: &#FB9C08%vault_suffix%&f &7(More info) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports RGB}"
+    - "[Broadcast] &#FB9C08Ԑ &fTitle set for player / Титул установлен для игрока &#FB9C08%player%"
+    - "[Broadcast] &#FB9C08ԏ &fTitle&7: &#FB9C08%vault_suffix%&f &7(More info / Подробнее)"
     - "[Broadcast] &r"
-    - "[Message] &#FB9C08&lTITLE&7: &fYour new title is&7: &#FB9C08%vault_suffix%"
+    - "[Message] &#FB9C08&lTITLE&7: &fYour new title is / Ваш новый титул&7: &#FB9C08%vault_suffix%"
     - "[Sound] ENTITY_VILLAGER_YES:0.2:1.0"
     - "[Console] perms user %player% permission set htitle.use false"
+
   max-size:
     - "[Message] &r"
-    - "[Message] &#FB9C08ԑ &fOops! Title must be under &#FB9C0812&f characters &#FB9C08:) {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &#FB9C08ԑ &fOops! Title must be under / Ой! Титул должен быть менее &#FB9C0812&f characters / символов :)"
     - "[Message] &r"
     - "[Sound] ENTITY_VILLAGER_NO:0.2:1.0"
+
   confirm:
-    - "[Bossbar] &fConfirm setting the title &#FB9C08%title%&f!:200:red:notched_20:1.0"
-    - "[Message] &r {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Confirm title}"
-    - "[Message] &#FB9C08Ԑ &fClick here to &#FB9C08set&f the title {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Confirm title}"
-    - "[Message] &#FB9C08ԏ &fPreview&7: &#FB9C08%title%&r&#FB9C08 %player_name% {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Confirm title}"
-    - "[Message] &r {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Confirm title}"
+    - "[Bossbar] &fConfirm setting the title / Подтвердите установку титула &#FB9C08%title%&f!:200:red:notched_20:1.0"
+    - "[Message] &r {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Confirm title / Подтвердить титул}"
+    - "[Message] &#FB9C08Ԑ &fClick to &#FB9C08confirm / подтвердить &fthis title"
+    - "[Message] &#FB9C08ԏ &fPreview / Предпросмотр&7: &#FB9C08%title%&r&#FB9C08 %player_name%"
+    - "[Message] &r {HoverText:cmd /title confirm, text: §x§F§B§9§C§0§8Confirm title / Подтвердить титул}"
     - "[Sound] ENTITY_EXPERIENCE_ORB_PICKUP:0.2:1.0"
+
   confirm-expired:
-    - "[Title] &fTitle &#FB9C08setup && &#FB9C08confirmation &fexpired!"
+    - "[Title] &fTitle setup && confirmation expired / Установка и подтверждение титула истекли!"
     - "[Message] &r"
-    - "[Message] &#FB9C08ԑ &fTitle &#FB9C08confirmation &fhas expired! {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &#FB9C08ԑ &fTitle confirmation has expired / Подтверждение титула истекло! {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
     - "[Message] &r"
     - "[Sound] ENTITY_EXPERIENCE_ORB_PICKUP:0.2:1.0"
+
   confirm-null:
     - "[Message] &r"
-    - "[Message] &#FB9C08ԑ &fYou don’t have a &#FB9C08title&f to &#FB9C08confirm&f! {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &#FB9C08ԑ &fYou don’t have a title to confirm / У вас нет титула для подтверждения! {HoverText:cmd /title, text: §x§F§B§9§C§0§8Supports &#RRGGBB}"
+    - "[Message] &r"
+    - "[Sound] ENTITY_VILLAGER_NO:0.2:1.0"
+
+  blocked-word:
+    - "[Message] &r"
+    - "[Message] &#FB9C08ԑ &fYour title contains &#FB9C08blocked&f words! / Титул содержит &#FB9C08запрещённые&f слова!"
     - "[Message] &r"
     - "[Sound] ENTITY_VILLAGER_NO:0.2:1.0"

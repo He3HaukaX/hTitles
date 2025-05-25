@@ -16,9 +16,11 @@ public class Config {
     public List<String> actions_confirm;
     public List<String> actions_confirm_null;
     public List<String> actions_confirm_expired;
+    public List<String> actions_blocked_word;
     public int settings_priority;
     public int settings_max_size;
     public int settings_delay;
+    public List<String> settings_blocked_words;
     private final JavaPlugin plugin;
     public Config(JavaPlugin plugin) {
         this.plugin = plugin;
@@ -35,10 +37,12 @@ public class Config {
         this.actions_confirm_expired = config.getStringList("actions.confirm-expired");
         this.actions_confirm_null = config.getStringList("actions.confirm-null");
         this.actions_max_size = config.getStringList("actions.max-size");
+        this.actions_blocked_word = config.getStringList("actions.blocked-word");
 
         this.settings_priority = config.getInt("settings.priority", 100);
         this.settings_max_size = config.getInt("settings.max-size", 16);
         this.settings_delay = config.getInt("settings.delay", 10000);
+        this.settings_blocked_words = config.getStringList("settings.blocked-words");
     }
 }
 

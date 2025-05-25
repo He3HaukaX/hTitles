@@ -66,6 +66,13 @@ public class TitleHandler implements CommandExecutor {
                 .replaceAll("&#([a-fA-F\\d]{6})", "")
                 .replaceAll("#([a-fA-F\\d]{6})", "");
 
+        for (String blocked : config.settings_blocked_words) {
+            if (cleanTitle.contains(blocked)) {
+                actionExecutor.execute(player, config.actions_blocked_word, blocked, player.getLocation());
+                return true;
+            }
+        }
+
         int length = cleanTitle.codePointCount(0, cleanTitle.length());
 
         if (length > config.settings_max_size + 1) {
